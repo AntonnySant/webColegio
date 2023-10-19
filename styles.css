@@ -187,5 +187,77 @@ footer {
 .card-botton {
   margin-bottom: 55px;
 }
+    
+/*estilos footer*/
+footer {
+  background: #2B713A;
+}
+footer .content-footer {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .content-footer .info {
+  max-width: 374px;
+}
+footer .content-footer .info .title  {
+  border-bottom: thin solid #fff;
+  padding-bottom: 24px;
+}
+footer .content-footer .info .title h4 {
+  font-size: 32px !important;
+  color: #fff;
+  font-family: 'Roboto' sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer .content-footer .info .sede {
+  margin-top: 32px;
+}
+footer .content-footer .info .sede:last-child {
+  margin-bottom: 32px;
+}
+footer .content-footer .info .sede ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer .content-footer .info .sede ul li {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+
+footer .content-footer .info .sede ul li span {
+  font-weight: bold;
+}
+footer .content-footer .imgages img{
+  max-height: 300px;
+}
+footer .derechos{
+  background: #08540D;
+}
+
+footer .derechos .content{
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  padding: 32px 16px;
+  justify-content: space-between;
+}
+
+footer .derechos .content div {
+  color: #cecece;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+/* Añade estilos adicionales según tu preferencia */
+
 
 /* Añade estilos adicionales según tu preferencia */
