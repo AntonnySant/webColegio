@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Encabezado fijo -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <h3>COLEGIO I.T.D. JUAN DEL CORRAL I.E.D.</h3>
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
+                    Registro
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Iniciar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreUsuario" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="nombreUsuario"
+                            placeholder="Ingrese su nombre de usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correoElectronico"
+                            placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Ingrese su contraseña">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreUsuario" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="nombreUsuario"
+                            placeholder="Ingrese su nombre de usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Ingrese su contraseña">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="foto1.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="foto1.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="foto3.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="foto4.jpeg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 p-2">
+                <div class="card">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#mision" class="btn-card">
+                        <div class="card-body">
+                            <!-- Button trigger modal -->
+                            <h3>Misión</h3>
+                        </div>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mision" tabindex="-1" aria-labelledby="mision" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="mision">Misión</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    El Colegio Distrital Instituto Técnico Juan del Corral es una institución
+                                    educativa distrital articulada con el SENA, que ofrece a niños, niñas y
+                                    jóvenes una formación ciudadana integral a través del fortalecimiento de
+                                    valores y capacidades para la ciudadanía y la convivencia y el desarrollo de
+                                    programas académicos y técnicos, tales como Contabilización de procesos
+                                    contables y financieros y Desarrollo gráfico de Proyectos de construcción,
+                                    promoviendo su incorporación a actividades productivas que contribuyan al
+                                    desarrollo sostenible, social, económico y tecnológico de la capital y del
+                                    país.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 p-2">
+                <div class="card">
+
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#vision" class="btn-card">
+                        <div class="card-body">
+                            <h3>Visión</h3>
+                        </div>
+                    </a>
+                    <div class="modal fade" id="vision" tabindex="-1" aria-labelledby="vision" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="vision">Visión</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    En el año 2026, el Colegio Distrital Instituto Técnico Juan del Corral será
+                                    reconocido como líder en el ámbito distrital por aportar a la sociedad
+                                    colombiana bachilleres técnicos con un excelente nivel académico, una amplia
+                                    conciencia de responsabilidad social y formados en valores ciudadanos, que
+                                    lideren procesos de emprendimiento en espacios de formación técnica-laboral
+                                    para que mejoren su calidad de vida y contribuyan a la construcción de una
+                                    sociedad más justa, equitativa y pasiva.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 p-2">
+                <div class="card">
+
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#programar" class="btn-card">
+                        <div class="card-body">
+                            <h3>Educar para la vida</h3>
+                        </div>
+                    </a>
+                    <div class="modal fade" id="programar" tabindex="-1" aria-labelledby="programar" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="programar">Educar para la vida</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body modal-lg">
+                                    El artículo 67 de la Constitución Política de Colombia (1991), la ley General
+                                    de Educación (Ley 115 de 1994) y su decreto reglamentario 1860 hablan del
+                                    derecho a la educación y enfatizan en la responsabilidad que en el proceso
+                                    educativo le corresponde tanto a la sociedad como a la familia y al Estado.
+                                    Acordes con este mandato constitucional, el reto fundamental del Colegio
+                                    Instituto Técnico Juan del Corral es “educar para la vida” y propender por el
+                                    mejoramiento de todos los procesos que apunten en esa dirección.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center p-4">Modalidades</h1>
+        </div>
+        <div class="row">
+            <div class="col card-botton">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">Contabilidad</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">Programación</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">Diseño</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+
+    <footer class="text-light text-center py-5">
+        <div class="container">
+            <p>&copy; 2023 Tu Sitio Web. Todos los derechos reservados.</p>
+            <img src="https://juandelcorral.edu.co/wp-content/uploads/2023/03/escudo_2019_verde_fondo-670x1024.png"
+            id="img_logo" alt="">
+        </div>
+    </footer>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
