@@ -257,6 +257,12 @@ footer .derechos .content div {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* Ajusta la posición vertical de los controles */
+}
+
 /* Añade estilos adicionales según tu preferencia */
 
 

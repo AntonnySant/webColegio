@@ -1,19 +1,44 @@
 // script.js
-document.getElementById("openModalBtn").onclick = function() {
-    document.getElementById("loginModal").style.display = "block";
-  }
-  
-  document.getElementById("closeModalBtn").onclick = function() {
+document.getElementById("btnRegistro").onclick = function(){
+  alert("Si estoy funcionando")
+}
+
+// document.getElementById("btn_registro").addEventListener("submit", function(event) {
+//   event.preventDefault(); // Evita el envío del formulario por defecto
+
+//   const username = document.getElementById("nombreUsuario").value;
+//   const email = document.getElementById("correoElectronico").value;
+//   const password = document.getElementById("contrasena").value;
+//   const profile = document.getElementById("selectPerfil").value;
+//   const message = document.getElementById("message");
+
+//   if (username.trim() === "" || password.trim() === "") {
+//       message.innerHTML = "Por favor, complete todos los campos.";
+//       message.style.color = "red";
+//   } else {
+//       // Aquí puedes realizar el envío del formulario o realizar otras acciones
+//       message.innerHTML = "Registro exitoso.";
+//       message.style.color = "green";
+//       // Limpia los campos del formulario
+//       document.getElementById("registrationForm").reset();
+//   }
+// });
+
+
+document.getElementById("openModalBtn").onclick = function () {
+  document.getElementById("loginModal").style.display = "block";
+};
+
+document.getElementById("closeModalBtn").onclick = function () {
+  document.getElementById("loginModal").style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target === document.getElementById("loginModal")) {
     document.getElementById("loginModal").style.display = "none";
   }
-  
-  window.onclick = function(event) {
-    if (event.target === document.getElementById("loginModal")) {
-      document.getElementById("loginModal").style.display = "none";
-    }
-  }
+};
 
-  
 const openModalButton = document.getElementById("openModal");
 const closeModalButton = document.getElementById("closeModal");
 const registrationModal = document.getElementById("registrationModal");
@@ -32,9 +57,9 @@ window.addEventListener("click", (event) => {
   }
 });
 
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
+var myModal = document.getElementById("myModal");
+var myInput = document.getElementById("myInput");
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
+myModal.addEventListener("shown.bs.modal", function () {
+  myInput.focus();
+});
