@@ -1,7 +1,18 @@
 // script.js
-document.getElementById("btnRegistro").onclick = function(){
-  alert("Si estoy funcionando")
-}
+// document.getElementById("btnInicioSesion").addEventListener("submit", function(event) {
+//   event.preventDefault();  //Evita que se envie el formulario por defecto
+
+//   // capturar los nombre de los campos del formulario
+//   const usuario = userInput.value;
+//   const contrasena = passInput.value;
+
+//   console.log("Usuario: " + usuario);
+//   console.log("contrasena: " + contrasena);
+
+//   //Cierre de modal
+//   myModal.style.display = "none";
+
+// })  
 
 // document.getElementById("btn_registro").addEventListener("submit", function(event) {
 //   event.preventDefault(); // Evita el envío del formulario por defecto
