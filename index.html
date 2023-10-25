@@ -66,15 +66,15 @@
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form>
+                <form id="loginForm">
                     <div class="mb-3">
-                        <label for="nombreUsuario" class="form-label">Nombre de Usuario</label>
-                        <input type="text" class="form-control" id="usuarioIngreso"
-                            placeholder="Ingrese su nombre de usuario" required>
+                        <label for="correo" class="form-label">Correo de Usuario</label>
+                        <input type="email" class="form-control" id="emailLogin"
+                            placeholder="Ingrese su correo de usuario" required>
                     </div>
                     <div class="mb-3">
                         <label for="contrasena" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasenaIngreso" placeholder="Ingrese su contraseña" required>
+                        <input type="password" class="form-control" id="passIngreso" placeholder="Ingrese su contraseña" required>
                     </div>
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary mb-3" id="btnIngresar">Ingresar</button>

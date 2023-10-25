@@ -1,39 +1,18 @@
-// script.js
-// document.getElementById("btnInicioSesion").addEventListener("submit", function(event) {
-//   event.preventDefault();  //Evita que se envie el formulario por defecto
+document.getElementById("loginForm").addEventListener("submit", function(event){
+  event.preventDefault();
 
-//   // capturar los nombre de los campos del formulario
-//   const usuario = userInput.value;
-//   const contrasena = passInput.value;
+  //capturar los valores de correo y contraseña
+  const correoLogin = document.getElementById("emailLogin").value;
+  const passLogin = document.getElementById("passIngreso").value;
 
-//   console.log("Usuario: " + usuario);
-//   console.log("contrasena: " + contrasena);
+  if (correoLogin === "usuario@hola.com" && passLogin === "contraseña") {
+    window.location.href = "pagina2.html"
+  } else {
+    alert("Credeciales incorrectas. por favor, intentalo de nuevo.")
+  }
 
-//   //Cierre de modal
-//   myModal.style.display = "none";
+})
 
-// })  
-
-// document.getElementById("btn_registro").addEventListener("submit", function(event) {
-//   event.preventDefault(); // Evita el envío del formulario por defecto
-
-//   const username = document.getElementById("nombreUsuario").value;
-//   const email = document.getElementById("correoElectronico").value;
-//   const password = document.getElementById("contrasena").value;
-//   const profile = document.getElementById("selectPerfil").value;
-//   const message = document.getElementById("message");
-
-//   if (username.trim() === "" || password.trim() === "") {
-//       message.innerHTML = "Por favor, complete todos los campos.";
-//       message.style.color = "red";
-//   } else {
-//       // Aquí puedes realizar el envío del formulario o realizar otras acciones
-//       message.innerHTML = "Registro exitoso.";
-//       message.style.color = "green";
-//       // Limpia los campos del formulario
-//       document.getElementById("registrationForm").reset();
-//   }
-// });
 
 
 document.getElementById("openModalBtn").onclick = function () {
