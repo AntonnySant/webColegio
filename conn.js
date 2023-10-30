@@ -1,4 +1,30 @@
 // Datos de estudiantes y notas (simulados)
+
+document.getElementById("btnRequest").addEventListener("click", function() {
+    // Realizar una solicitud GET al servidor local
+    fetch("http://localhost/pagina2.html")
+        .then(response => response.text())
+        .then(data => {
+            alert("Respuesta del servidor: " + data);
+        })
+        .catch(error => {
+            alert("Error al realizar la solicitud: " + error);
+        });
+
+    // fetch('conexion.php')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         alert("Respuesta del servidor: " + data);
+    //         console.log("Si me conecte :) " + data);
+    //     })
+    //     .catch(error => {
+    //         alert("Error al realizar la solicitud: " + error);
+            
+    //         console.error('Error en la solicitud: ' + error);
+    //     })
+});
+
+
 const estudiantes = [
     { nombre: "Hendy Tomas Rubio Arenales", nota: 80, nota2: 60, nota3: 70, nota4: 8.0, nota5: 8.0,nota6: 8.0,nota7: 8.0,nota8: 8.0,nota9: 8.0,nota10: 8.0 },
     { nombre: "Angel Gabriel Quintana Leon", nota: 85 },
