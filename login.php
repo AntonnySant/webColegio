@@ -35,7 +35,7 @@ if ($result->num_rows == 1) {
 function consultar_notas(){ 
     global $conn;  
 // Consulta para obtener los datos de los estudiantes y sus notas
-$sql2 = "SELECT idEstudiante, nombre_estudiante, nota1, nota2, nota3, nota4, nota5, nota6, nota7, nota8, nota9, nota10 FROM estudiantes";
+$sql2 = "SELECT idEstudiante, nombre_estudiante, nota1, nota2, nota3, nota4, nota5, nota6, nota7, nota8, nota9, nota10, resultado, resul70, evaluacion, resul20, autoeva, resul5, coeva, resul2_5, definitiva FROM estudiantes";
 return $conn->query($sql2);
 // $result2 = $conn->query($sql2);
 }

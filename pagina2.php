@@ -34,11 +34,9 @@
                 <th>Evaluacion</th>
                 <th>Resul 20%</th>
                 <th>AutoEva</th>
-                <th>Resul 3%</th>
+                <th>Resul 5%</th>
                 <th>CoEva</th>
-                <th>Resul 3%</th>
-                <th>Asistencia</th>
-                <th>Resul 4%</th>
+                <th>Resul 5%</th>
                 <th>Definitiva</th>
             </tr>
            
@@ -58,9 +56,16 @@
                 $nota8 = $row["nota8"];
                 $nota9 = $row["nota9"];
                 $nota10 = $row["nota10"];
+                $evaluacion = $row["evaluacion"];
+                $autoeva = $row["autoeva"];
+                $coeva = $row["coeva"];
 
                 $resultado = ($nota1 + $nota2 + $nota3 + $nota4 + $nota5 + $nota6 + $nota7 + $nota8 + $nota9 + $nota10)/10;
                 $resulta70 = $resultado * 0.7;
+                $resul20 = $evaluacion * 0.2;
+                $resul5 = $autoeva * 0.05;
+                $resul2_5 = $coeva * 0.05;
+                $definitiva = ($resulta70 + $resul20 + $resul5 + $resul2_5);
                 
             echo "<tr>";
             echo '<td>' . $row["nombre_estudiante"] . '</td>';
@@ -75,8 +80,15 @@
             echo '<td> <input type="number" name="'.$row["idEstudiante"].'_nota8" id="'.$row["idEstudiante"].'_nota8" value="'.$row["nota8"].'"></td>';
             echo '<td> <input type="number" name="'.$row["idEstudiante"].'_nota9" id="'.$row["idEstudiante"].'_nota9" value="'.$row["nota9"].'"></td>';
             echo '<td> <input type="number" name="'.$row["idEstudiante"].'_nota10" id="'.$row["idEstudiante"].'_nota10" value="'.$row["nota10"].'"></td>';
-            echo "<td>$resultado</td>";
-            echo "<td>$resulta70</td>";
+            echo "<td> <input type='number' name='${idEstudiante}_resultado' value='$resultado' disabled></td>";
+            echo "<td> <input type='number' name='${idEstudiante}_resulta70' value='$resulta70' disabled></td>";
+            echo '<td> <input type="number" name="'.$row["idEstudiante"].'_evaluacion" id="'.$row["idEstudiante"].'_evaluacion" value="'.$row["evaluacion"].'"></td>';
+            echo "<td> <input type='number' name='${idEstudiante}_resul20' value='$resul20' disabled></td>";
+            echo '<td> <input type="number" name="'.$row["idEstudiante"].'_autoeva" id="'.$row["idEstudiante"].'_autoeva" value="'.$row["autoeva"].'"></td>';
+            echo "<td> <input type='number' name='${idEstudiante}_resul5' value='$resul5' disabled></td>";
+            echo '<td> <input type="number" name="'.$row["idEstudiante"].'_coeva" id="'.$row["idEstudiante"].'_coeva" value="'.$row["coeva"].'"></td>';
+            echo "<td> <input type='number' name='${idEstudiante}_resul2_5' value='$resul2_5' disabled></td>";
+            echo "<td> <input type='number' name='${idEstudiante}_definitiva' value='$definitiva' disabled></td>";
             echo "</tr>";
         }
         ?>
