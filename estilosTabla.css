@@ -1,0 +1,66 @@
+/* Estilos para la tabla */
+#studentTable {
+    width: 100%; /* Hace que la tabla ocupe el ancho completo del contenedor */
+    border-collapse: collapse; /* Borra los espacios entre las celdas */
+  }
+  
+  #studentTable th, #studentTable td {
+    border: 1px solid #ddd; /* Agrega bordes a las celdas */
+    padding: 8px; /* Añade espacio alrededor del contenido */
+    text-align: center; /* Centra el texto en las celdas */
+  }
+  
+  /* Estilos para las filas impares (para mejorar la legibilidad) */
+  #studentTable tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fondo gris para filas impares */
+  }
+  
+  /* Estilos para los encabezados de la tabla */
+  #studentTable th {
+    background-color: #007BFF; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto en el encabezado */
+  }
+  
+  /* Estilos para las celdas de resultado y evaluación (colorear según el valor) */
+  #studentTable td[name$="resultado"],
+  #studentTable td[name$="resulta70"],
+  #studentTable td[name$="resul20"],
+  #studentTable td[name$="resul5"],
+  #studentTable td[name$="resul2_5"],
+  #studentTable td[name$="definitiva"] {
+    font-weight: bold; /* Texto en negrita para resaltar los resultados */
+  }
+  
+  #studentTable td[name$="resultado"] {
+    background-color: #d4edda; /* Fondo verde para resultado */
+  }
+  
+  #studentTable td[name$="resul20"] {
+    background-color: #bee5eb; /* Fondo azul para resul20 */
+  }
+  
+  #studentTable td[name$="resul5"] {
+    background-color: #f8d7da; /* Fondo rojo para resul5 */
+  }
+  
+  #studentTable td[name$="resul2_5"] {
+    background-color: #ffe5b3; /* Fondo amarillo para resul2_5 */
+  }
+  
+  /* Estilos para los campos de entrada (resaltar cuando se enfocan) */
+  #studentTable input[type="number"] {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    padding: 5px; /* Añade espacio alrededor del input */
+    border: 1px solid #007BFF; /* Borde azul cuando está enfocado */
+  }
+  
+  /* Estilos para el botón de guardar (ajusta según tus necesidades) */
+  #studentTable input[type="submit"] {
+    background-color: #007BFF; /* Fondo azul para el botón */
+    color: #fff; /* Texto blanco en el botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-weight: bold; /* Texto en negrita en el botón */
+  }
+  

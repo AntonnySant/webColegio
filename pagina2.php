@@ -10,6 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Estudiantes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="estilosTabla.css">
+    
+
 </head>
 
 <body>
@@ -30,13 +36,13 @@
                 <th>Nota 9</th>
                 <th>Nota 10</th>
                 <th>Resultado</th>
-                <th>Resul 70%</th>
+                <th>Resul70%</th>
                 <th>Evaluacion</th>
-                <th>Resul 20%</th>
+                <th>Resul20%</th>
                 <th>AutoEva</th>
-                <th>Resul 5%</th>
+                <th>Resul5%</th>
                 <th>CoEva</th>
-                <th>Resul 5%</th>
+                <th>Resul5%</th>
                 <th>Definitiva</th>
             </tr>
            
@@ -95,10 +101,37 @@
          
         </tbody>
     </table>
+    <div>
     <input type="hidden" name="action" value="Actualizar_notas">
     <input type="submit" value="Guardar">
+    
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal" id="btnAgregarEstudiante">
+                    Agregar Estudiante
+                </button>
+    </div>
     </form>
+
+     <!-- Modal de Inicio de Sesión -->
+     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="login.php" method="post">
+                    <div class="mb-3">
+                        <label for="estudiante" class="form-label">Nombre de estudiante</label>
+                        <input type="text" class="form-control" name="estudiante" id="estudiante"
+                            placeholder="Ingrese nombre del estudiante" required>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3" id="btnIngresar">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- <script src="conn.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

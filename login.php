@@ -67,10 +67,29 @@ function Actualizar_notas(){
 
 function actualizarNota_estudiante ($idEstudiante, $nota, $idNota){
     global $conn;  
-// Consulta para obtener los datos de los estudiantes y sus notas
+// Consulta para actualizar los datos de los estudiantes y sus notas
 $sql2 = "update estudiantes set $idNota = $nota
 where idEstudiante = $idEstudiante";
 return $conn->query($sql2);
+}
+
+if(isset($_POST["estudiante"])){
+    $estudiante = $_POST["estudiante"]; 
+    Registro_Estudiante($estudiante);
+    // break;   
+}
+
+function Registro_Estudiante($nombre_estudiante){
+    global $conn;  
+// Consulta para actualizar los datos de los estudiantes y sus notas
+$sql3 = "INSERT INTO estudiantes (nombre_estudiante) VALUES ('$nombre_estudiante')";
+
+if ($conn->query($sql3)){
+    header("Location:pagina2.php");
+    exit;
+} else {
+    echo "Error al registrar al estudiante: " . $conn->error;
+}
 }
 
 // Cierra la conexión a la base de datos
